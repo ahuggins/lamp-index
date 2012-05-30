@@ -14,9 +14,10 @@
 <body>
 	<h2>Localhost Works!</h2>
 	<p>Welcome to localhost. Below is a list of sites/projects, click on one to launch.</p>
+	<h3>Tools</h3>
 	<p> <a href="phpinfo.php" class="button">phpinfo</a> </p>
 	<p> <a href="phpmyadmin" class="button">phpmyadmin</a></p>
-
+	<h3>Projects</h3>
 <?php 
 // open this directory 
 $myDirectory = opendir(".");
