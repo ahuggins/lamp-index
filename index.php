@@ -31,10 +31,6 @@ while($entryName = readdir($myDirectory)) {
 	$dirArray[] = $entryName;
 }
 
-echo "<pre>";
-print_r(filetype($dirArray[$index]));
-echo "</pre>";
-
 // close directory
 closedir($myDirectory);
 
