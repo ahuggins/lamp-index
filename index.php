@@ -51,7 +51,13 @@ for($index=0; $index < $indexCount; $index++) {
 
         if ( $type == 'dir'){ 
 
-        print("<a href=\"$dirArray[$index]\" class=\"button\">$dirArray[$index]</a> <a href=\"$dirArray[$index]/wp-admin\" class=\"button\">wp-admin</a><br /><br />");
+        $admin_path = $dirArray[$index].'/wp-admin';
+
+        	if( file_exists($admin_path)) {
+        		print("<a href=\"$dirArray[$index]\" class=\"button\">$dirArray[$index]</a> <a href=\"$dirArray[$index]/wp-admin\" class=\"button\">wp-admin</a><br /><br />");
+        	} else {
+        		print("<a href=\"$dirArray[$index]\" class=\"button\">$dirArray[$index]</a><br /><br />");
+        	}
 		}
 	}
 }
